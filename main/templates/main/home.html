@@ -1,0 +1,9 @@
+{% if activty_list %}
+    <ul>
+    {% for activity in activty_list %}
+        <li>{{ activity.title }} </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No activities available.</p>
+{% endif %}
