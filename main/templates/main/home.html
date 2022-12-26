@@ -1,9 +1,50 @@
-{% if activty_list %}
-    <ul>
-    {% for activity in activty_list %}
-        <li>{{ activity.title }} </li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No activities available.</p>
-{% endif %}
+
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Activity Connect</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'main/main.css' %}">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Activities</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main content -->
+  <main>
+    <h1>Welcome to our Extra Curricular Activities Catalogue!</h1>
+    <p>Here you will find a wide variety of sports, camps, and classes in your area. Browse through our selection to find something that interests you.</p>
+
+    <!-- Storefront -->
+    <section id="storefront">
+        {% if activty_list %}
+            {% for activity in activty_list %}
+                <article class="activity">
+                    <h2>{{ activity.title }}</h2>
+                    <p>{{activity.description}}</p>
+                </article>
+            {% endfor %}
+        {% else %}
+            <p>No activities available.</p>
+        {% endif %}
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>Copyright 2022 Activity Connect</p>
+  </footer>
+</body>
+</html>
