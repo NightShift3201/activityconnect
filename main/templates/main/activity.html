@@ -1,8 +1,37 @@
-<h1>{{ activity.name }}</h1>
-<p>{{ activity.description }}</p>
-<p>Area code: {{ activity.area_code }}</p>
-<p>Start time: {{ activity.startTime }}</p>
-<p>End time: {{ activity.endTime }}</p>
-<p>Start date: {{ activity.startDate }}</p>
-<p>End date: {{ activity.endDate }}</p>
-<p>Frequency: {{ activity.frequency }}</p>
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Activity Connect</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'main/main.css' %}">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="/home">Home</a></li>
+        <li><a href="#">Activities</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>{{ activity.name }}</h1>
+    <p>{{ activity.description }}</p>
+    <p>Area code: {{ activity.area_code }}</p>
+    <p>Start time: {{ activity.startTime }}</p>
+    <p>End time: {{ activity.endTime }}</p>
+    <p>Start date: {{ activity.startDate }}</p>
+    <p>End date: {{ activity.endDate }}</p>
+    <p>Frequency: {{ activity.frequency }}</p>
+    </main>
+<footer>
+    <p>Copyright 2022 Activity Connect</p>
+  </footer>
+</body>
+</html>
