@@ -6,6 +6,7 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  
 }
   
   header {
@@ -44,21 +45,30 @@ body {
 
 
   
+  
   #storefront {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 40px;
   }
   
+  #storefront a {
+    color: black;
+    text-decoration: none;
+  }
+
   .activity {
     background-color: white;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     padding: 20px;
+    
   }
   
   .activity h2 {
     margin: 0;
   }
+  
+
   
   footer {
     background-color: lightgray;

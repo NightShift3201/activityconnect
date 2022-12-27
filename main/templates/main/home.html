@@ -31,10 +31,12 @@
     <section id="storefront">
         {% if activty_list %}
             {% for activity in activty_list %}
-                <article class="activity">
-                    <h2>{{ activity.title }}</h2>
-                    <p>{{activity.description}}</p>
-                </article>
+                <a href="/activity/{{ activity.title }}/">
+                    <article class="activity">
+                        <h2>{{ activity.title }}</h2>
+                        <p>{{activity.description}}</p>
+                    </article>
+                </a>
             {% endfor %}
         {% else %}
             <p>No activities available.</p>
