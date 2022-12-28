@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+
 body {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
@@ -27,6 +29,7 @@ body {
   
   header li {
     margin: 0 15px;
+    flex-shrink: 0; /* flex */
   }
   
   header a {
@@ -62,8 +65,9 @@ body {
   .activity {
     background-color: white;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
     padding: 20px;
-    
+   
   }
   
   .activity h2 {
@@ -78,25 +82,25 @@ body {
     padding: 20px;
   }
 
-  .page_head{
-    display: flex;
-    align-items: center;
-    margin:1.5rem;
-  }
 
   .search-container{
     align-items: center;
   }
 
+  .search-form{
 
+    flex-grow: 1;
+    min-width: 18rem;
+
+  }
 
   form input{
 
     width: 800px;
     height: 40px;
     font-size: 25px;
-    flex-grow: 1;
-    min-width: 18rem;
+    flex-shrink:1;
+    
 
 
   }
@@ -110,6 +114,8 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+
+
     flex-shrink: 0;
 
   }
@@ -118,11 +124,6 @@ body {
     background: #ff9900;
   }
 
-  .h {
-    padding: 5px 0;
-    flex-shrink: 0;
-
-  }
 
   .dropbtn {
   background-color: #080b0a;
@@ -133,15 +134,18 @@ body {
   border-radius: 5px;
 }
 
-.dropdown {
-  position: relative;
-  display: inline-block;
+ .dropdown {
   margin-left: auto; 
-  margin-right: 0;
-  flex-shrink: 0;
+  margin-right: 0%;
+  float: right;
+  position: relative;
   cursor: pointer;
 
+
+  flex-shrink: 0;
+  
 }
+
 
 .dropdown-content {
   display: none;
@@ -170,8 +174,7 @@ body {
 .Jack {
   
   border-radius: 5px;
-  border: 2px;
-  border-color: rgb(245, 11, 11); /* idk if this will work*/
+  border: 2px solid black;
 
   font-size: 20px;
 
@@ -186,8 +189,7 @@ body {
 }
 
 .Jack:hover{
-  border: 5px;
-  background-color: rgba(255, 210, 192, 0.859);
+  border: 2px solid white;
 
 
 }
