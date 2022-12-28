@@ -162,6 +162,17 @@ body {
 
 .dropdown:hover .dropbtn {background-color: #040504;}
 
+
+
+.Jack_work {
+  border:rgba(0, 0, 0, 0.1) 2px;
+  background-color:rgba(0, 0, 0, 0.1);
+  width: 175px;
+  height: 50px;
+  text-align: center;
+
+}
+
   
 
 
