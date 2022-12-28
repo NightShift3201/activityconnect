@@ -108,6 +108,7 @@ body {
     background:#ffbb00;
     font-size: 17px;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
     flex-shrink: 0;
 
@@ -129,6 +130,7 @@ body {
   padding: 13px;
   font-size: 16px;
   border: none;
+  border-radius: 5px;
 }
 
 .dropdown {
@@ -137,6 +139,7 @@ body {
   margin-left: auto; 
   margin-right: 0;
   flex-shrink: 0;
+  cursor: pointer;
 
 }
 
@@ -164,18 +167,34 @@ body {
 
 
 
-.Jack_work {
-  border:rgba(0, 0, 0, 0.1) 2px;
-  background-color:rgba(0, 0, 0, 0.1);
-  width: 175px;
-  height: 50px;
-  text-align: center;
+.Jack {
+  
+  border-radius: 5px;
+  border: 2px;
+  border-color: rgb(245, 11, 11); /* idk if this will work*/
+
+  font-size: 20px;
+
+
+  color:rgba(242, 238, 238, 0.948);
+  background-color:rgba(0, 0, 0, 0.826);
+  
+  width: 150px;
+  height: 35px;
+  cursor: pointer;
 
 }
 
-  
+.Jack:hover{
+  border: 5px;
+  background-color: rgba(255, 210, 192, 0.859);
 
 
-  
+}
+
+.recommend_Bar {
+  background-color:black;
+
+}
 
 
