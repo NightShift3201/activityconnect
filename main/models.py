@@ -14,4 +14,5 @@ class Activity(models.Model):
     startTime = models.TimeField()
     endTime = models.TimeField()
     frequency = models.CharField(max_length=50)
+    thumbnail = models.ImageField(blank=True, upload_to='images/')
 

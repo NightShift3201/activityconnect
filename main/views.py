@@ -17,3 +17,10 @@ def view_activity(request, activity_name):
     activity = Activity.objects.get(title=activity_name)
     context = {'activity': activity}
     return render(request, 'main/activity.html', context)
+
+def view_category(request, category_name):
+    activty_list = Activity.objects.all()
+    context = {
+        'activty_list' : activty_list
+    }
+    return render(request, 'main/home.html',context)

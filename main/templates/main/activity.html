@@ -21,7 +21,7 @@
     </nav>
   </header>
   <main>
-    <h1>{{ activity.name }}</h1>
+    <h1>{{ activity.title }}</h1>
     <p>{{ activity.description }}</p>
     <p>Area code: {{ activity.area_code }}</p>
     <p>Start time: {{ activity.startTime }}</p>
@@ -29,6 +29,7 @@
     <p>Start date: {{ activity.startDate }}</p>
     <p>End date: {{ activity.endDate }}</p>
     <p>Frequency: {{ activity.frequency }}</p>
+    <img src="{{activity.thumbnail.url}}" alt="{{ activity.title }}">
     </main>
 <footer>
     <p>Copyright 2022 Activity Connect</p>
