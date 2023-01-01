@@ -55,6 +55,9 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 40px;
+    display: flex;
+    flex-wrap: wrap;
+
   }
   
   #storefront a {
@@ -62,12 +65,30 @@ body {
     text-decoration: none;
   }
 
+  img {
+    border-radius: 11px;
+  }
+
   .activity {
     background-color: white;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    border:2px solid black; 
     border-radius: 10px;
     padding: 20px;
-   
+    
+    
+  }
+
+  .cost {
+    color: green;
+    font-size: 20px;
+    margin: 2px;
+  }
+
+  
+  .imageC {
+    display: flex;
+    justify-content: center;
   }
   
   .activity h2 {
@@ -197,6 +218,10 @@ body {
 .recommend_Bar {
   background-color:black;
 
+}
+
+aside {
+  display: block
 }
 
 

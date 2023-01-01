@@ -94,13 +94,23 @@
     <p>Here you will find a wide variety of sports, camps, and classes in your area. Browse through our selection to find something that interests you.</p>
 
     <!-- Storefront -->
+    <h2 align = "left" margin-left=-50px>See what's trending today. </h2>
+
+    
+
+
     <section id="storefront">
         {% if activty_list %}
             {% for activity in activty_list %}
                 <a href="/activity/{{ activity.title }}/">
                     <article class="activity">
-                        <h2>{{ activity.title }}</h2>
-                        <p>{{activity.description}}</p>
+                        <div class = "imageC"> 
+                          <img src="{{activity.thumbnail.url}}" alt="{{ activity.title }}" width = 300px height = 300px>
+                        </div>
+                        <p>        </p>
+                        <h2 align = "left" class = "title">{{ activity.title }}</h2>
+                        <h3 align = "left" class = "cost">$1000</h3>
+                        <p align = "left">{{activity.description}}</p>
                     </article>
                 </a>
             {% endfor %}
@@ -108,10 +118,9 @@
             <p>No activities available.</p>
         {% endif %}
     </section>
-
-
-
   </main>
+
+
 
   <!-- Footer -->
   <footer>
