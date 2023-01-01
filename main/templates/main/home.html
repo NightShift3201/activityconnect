@@ -22,8 +22,9 @@
       </ul>
     </nav>
     <div class="search-container">
-      <form class = "search-form">
-        <input type="text" placeholder="   " name="search">
+      <form class = "search-form" action="{% url 'search' %}" method="POST">
+        {% csrf_token %}
+        <input type="text" placeholder="   " name="query">
         <button type="submit"><i class="fa fa-search"></i></button>
       </form>
     </div>

@@ -24,3 +24,21 @@ def view_category(request, category_name):
         'activty_list' : activty_list
     }
     return render(request, 'main/home.html',context)
+
+def search(request):
+  if request.method == 'POST':
+    query = request.POST.get('query')
+
+    activty_list = Activity.objects.filter(title__icontains=query)
+    context = {
+        'activty_list' : activty_list
+    }
+
+    return render(request, 'main/home.html', {'activty_list': activty_list})
+  else:
+    activty_list = Activity.objects.all()
+    context = {
+        'activty_list' : activty_list
+    }
+    return render(request, 'main/home.html',context)
+
