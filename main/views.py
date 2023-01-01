@@ -20,11 +20,16 @@ def view_activity(request, activity_name):
     return render(request, 'main/activity.html', context)
 
 def view_category(request, category_name):
-    activty_list = Activity.objects.all()
+    if category_name=="all":
+        activty_list = Activity.objects.all()
+    else:
+        activty_list = Activity.objects.filter(tags__name__in=[category_name])
     context = {
         'activty_list' : activty_list
     }
     return render(request, 'main/home.html',context)
+
+
 
 def search(request):
   if request.method == 'POST':

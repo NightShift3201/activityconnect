@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from taggit.managers import TaggableManager
 
 # Create your models here.
 
@@ -14,5 +15,7 @@ class Activity(models.Model):
     startTime = models.TimeField()
     endTime = models.TimeField()
     frequency = models.CharField(max_length=50)
+    price = models.CharField(max_length=10, blank=True)
     thumbnail = models.ImageField(blank=True, upload_to='images/')
+    tags = TaggableManager()
 
