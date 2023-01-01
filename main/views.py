@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Activity
+from django.db.models import Q
 
 def index(request):
     return HttpResponse("Activity Connect!")
@@ -24,3 +25,21 @@ def view_category(request, category_name):
         'activty_list' : activty_list
     }
     return render(request, 'main/home.html',context)
+
+def search(request):
+  if request.method == 'POST':
+    query = request.POST.get('query')
+
+    activty_list = Activity.objects.filter(Q(title__icontains=query) | Q(description__icontains=query))
+    context = {
+        'activty_list' : activty_list
+    }
+
+    return render(request, 'main/home.html', {'activty_list': activty_list})
+  else:
+    activty_list = Activity.objects.all()
+    context = {
+        'activty_list' : activty_list
+    }
+    return render(request, 'main/home.html',context)
+

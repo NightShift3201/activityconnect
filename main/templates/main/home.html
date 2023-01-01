@@ -17,13 +17,14 @@
   <header class="page-head">
     <nav class="site-nav">
       <ul>
-        <li class = "h"><a href="#">Logo</a></li>
-        <li class = "h"><a href="#">Company Name</a></li>
+        <li class = "h"><a href="/home">Logo</a></li>
+        <li class = "h"><a href="/home">Company Name</a></li>
       </ul>
     </nav>
     <div class="search-container">
-      <form class = "search-form">
-        <input type="text" placeholder="   " name="search">
+      <form class = "search-form" action="{% url 'search' %}" method="POST">
+        {% csrf_token %}
+        <input type="text" placeholder="   " name="query" value="{{ request.POST.query }}">
         <button type="submit"><i class="fa fa-search"></i></button>
       </form>
     </div>
