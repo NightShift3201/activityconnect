@@ -101,6 +101,7 @@
 
 
     <section id="storefront">
+
         {% if activty_list %}
             {% for activity in activty_list %}
                 <a href="/activity/{{ activity.title }}/">
@@ -110,7 +111,7 @@
                         </div>
                         <p>        </p>
                         <h2 align = "left" class = "title">{{ activity.title }}</h2>
-                        <h3 align = "left" class = "cost">$1000</h3>
+                        <h3 align = "left" class = "cost">${{activity.price}}</h3>
                         <p align = "left">{{activity.description}}</p>
                     </article>
                 </a>
