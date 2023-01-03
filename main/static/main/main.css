@@ -246,6 +246,7 @@ aside {
   height: 500px;
   border: 1px solid black;
 
+
 }
 
 .wrapper {
@@ -257,11 +258,20 @@ aside {
   
 }
 
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+.topic {
+  padding: 0px;
+  margin: 15px 0px -19px 0px;
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
