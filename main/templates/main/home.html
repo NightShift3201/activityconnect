@@ -96,37 +96,80 @@
 
     <!-- Storefront -->
     <h2 align = "left" margin-left=-50px>See what's trending today. </h2>
+    
+
+    <div class = "wrapper">
+
 
     
+    <form class = "sidebar">
+      <button type="button" class="collapsible">Filter</button>
+        <div class="content">
+          <p>Hi</p>
+        </div>
+    </form>
 
 
     <section id="storefront">
+      
 
-        {% if activty_list %}
-            {% for activity in activty_list %}
-                <a href="/activity/{{ activity.title }}/">
-                    <article class="activity">
-                        <div class = "imageC"> 
-                          <img src="{{activity.thumbnail.url}}" alt="{{ activity.title }}" width = 300px height = 300px>
-                        </div>
-                        <p>        </p>
-                        <h2 align = "left" class = "title">{{ activity.title }}</h2>
-                        <h3 align = "left" class = "cost">${{activity.price}}</h3>
-                        <p align = "left">{{activity.description}}</p>
-                    </article>
-                </a>
-            {% endfor %}
-        {% else %}
-            <p>No activities available.</p>
-        {% endif %}
+      {% if activty_list %}
+          {% for activity in activty_list %}
+              <a href="/activity/{{ activity.title }}/">
+                  <article class="activity">
+                      <div class = "imageC"> 
+                        <img src="{{activity.thumbnail.url}}" alt="{{ activity.title }}" width = 300px height = 300px>
+                      </div>
+                      <p>        </p>
+                      <h2 align = "left" class = "title">{{ activity.title }}</h2>
+                      <h3 align = "left" class = "cost">${{activity.price}}</h3>
+                      <p align = "left">{{activity.description}}</p>
+                  </article>
+              </a>
+          {% endfor %}
+      {% else %}
+          <p>No activities available.</p>
+      {% endif %}
+
     </section>
+
+    </div>
+    
   </main>
 
-
-
+ 
+ 
+ 
   <!-- Footer -->
+  
   <footer>
     <p>Copyright 2022 Activity Connect</p>
   </footer>
+  
+
+
+
+  <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+    </script>
+
+  
+
+
 </body>
+
+
 </html>

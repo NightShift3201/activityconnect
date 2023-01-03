@@ -57,6 +57,8 @@ body {
     grid-gap: 40px;
     display: flex;
     flex-wrap: wrap;
+    float: right;
+    padding: 0px 0px 0px 10px;
 
   }
   
@@ -223,5 +225,44 @@ body {
 aside {
   display: block
 }
+
+.sidebar {
+  width: 300px;
+  height: 500px;
+  float: left;
+
+
+}
+
+.collapsible {
+  width: 302px;
+  height: 50px;
+  padding: 10px;
+}
+
+.content {
+  background-color: white;
+  width: 300px;
+  height: 500px;
+  border: 1px solid black;
+
+}
+
+.wrapper {
+  display: flex;
+  position: absolute;
+  margin: 10px;
+  left: 0px;
+  right: 0px;
+  
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+
 
 
