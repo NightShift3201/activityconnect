@@ -103,6 +103,10 @@ body {
     background-color: lightgray;
     text-align: center;
     padding: 20px;
+
+  
+    
+    
   }
 
 
@@ -117,16 +121,15 @@ body {
 
   }
 
-  form input{
+  .search-form input{
 
-    width: 800px;
+    width: 600px;
     height: 40px;
     font-size: 25px;
-    flex-shrink:1;
+    flex-grow:1;
     
-
-
   }
+
   .search-container button {
     float: right;
     height: 46px;
@@ -222,9 +225,6 @@ body {
 
 }
 
-aside {
-  display: block
-}
 
 .sidebar {
   width: 300px;
@@ -238,16 +238,19 @@ aside {
   width: 302px;
   height: 50px;
   padding: 10px;
+  cursor: pointer;
 }
 
 .content {
   background-color: white;
   width: 300px;
-  height: 500px;
+  height: 600px;
   border: 1px solid black;
+  text-align: left;
 
 
 }
+
 
 .wrapper {
   display: flex;
@@ -258,10 +261,13 @@ aside {
   
 }
 
-.topic {
-  padding: 0px;
-  margin: 15px 0px -19px 0px;
+.indenter {
+  padding: 10px;
 }
+
+
+
+
 
 
 
