@@ -91,17 +91,9 @@
 
   <!-- Main content -->
   <main>
-    <h1>Welcome to our Extra Curricular Activities Catalogue!</h1>
-    <p>Here you will find a wide variety of sports, camps, and classes in your area. Browse through our selection to find something that interests you.</p>
-
-    <!-- Storefront -->
-    <h2 align = "left" margin-left=-50px>See what's trending today. </h2>
-    
 
     <div class = "wrapper">
 
-
-    
     <form class = "sidebar">
       <button type="button" class="collapsible">Filter</button>
         <div class="content">
@@ -159,10 +151,9 @@
           {% for activity in activty_list %}
               <a href="/activity/{{ activity.title }}/">
                   <article class="activity">
-                      <div class = "imageC"> 
+                      <div> 
                         <img src="{{activity.thumbnail.url}}" alt="{{ activity.title }}" width = 300px height = 300px>
                       </div>
-                      <p>        </p>
                       <h2 align = "left" class = "title">{{ activity.title }}</h2>
                       <h3 align = "left" class = "cost">${{activity.price}}</h3>
                       <p align = "left">{{activity.description}}</p>
