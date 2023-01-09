@@ -25,7 +25,8 @@ def view_category(request, category_name):
     else:
         activty_list = Activity.objects.filter(tags__name__in=[category_name])
     context = {
-        'activty_list' : activty_list
+        'activty_list' : activty_list,
+        'category' : category_name.capitalize()
     }
     return render(request, 'main/home.html',context)
 

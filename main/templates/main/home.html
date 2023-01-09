@@ -91,7 +91,7 @@
 
   <!-- Main content -->
   <main>
-
+    <h1>{{ category }}</h1>
 
     <form class = "sidebar">
         <div class="content">
@@ -144,7 +144,6 @@
 
     <section id="storefront">
       
-
       {% if activty_list %}
           {% for activity in activty_list %}
               <a href="/activity/{{ activity.title }}/">
