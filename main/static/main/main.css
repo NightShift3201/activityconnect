@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300&display=swap');
 
 *{
-  outline: 2px solid limegreen !important;
+  /*outline: 2px solid limegreen !important;*/
+  box-sizing: border-box;
 }
+
 
 body {
   font-family: 'Assistant', sans-serif;
@@ -146,11 +148,10 @@ body {
   }
 
   .search-form input{
-
-    width: 90%;
+    width: calc(100% - 46px);;
     height: 40px;
     font-size: 25px;
-    flex-grow:1;
+
     
   }
 
