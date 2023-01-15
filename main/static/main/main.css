@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300&display=swap');
 
 *{
-  /*outline: 2px solid limegreen !important;*/
+  outline: 2px solid limegreen !important;
 }
 
 body {
@@ -11,6 +11,7 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  background:rgb(255, 255, 255);
   
 }
   
@@ -20,6 +21,8 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 15px 40px;
+    min-height: 50px;
+    max-width: 100%;
   }
   
   header ul {
@@ -46,9 +49,11 @@ body {
   main {
     flex: 1;
     max-width: 100%;
+    min-width: 95%;
     margin: 0 auto;
     padding: 20px;
     text-align: center;
+
   }
 
 
@@ -59,6 +64,7 @@ body {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    margin: 30px;
   }
   
   #storefront a {
@@ -68,8 +74,8 @@ body {
 
   
   #storefront .activity {
-    width: 350px;
-    height: 350px;
+    width: 300px;
+    height: 300px;
     text-align: center;
     background-color: rgb(255, 255, 255);
     margin: 15px 5px;
@@ -123,16 +129,13 @@ body {
   footer {
     background-color: lightgray;
     text-align: center;
-    padding: 20px;
-
-  
-    
-    
+    min-height:50px; 
   }
 
 
   .search-container{
     align-items: center;
+    width: 40%;
   }
 
   .search-form{
@@ -144,7 +147,7 @@ body {
 
   .search-form input{
 
-    width: 600px;
+    width: 90%;
     height: 40px;
     font-size: 25px;
     flex-grow:1;
@@ -161,8 +164,6 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-
-
     flex-shrink: 0;
 
   }
@@ -222,13 +223,9 @@ body {
   
   border-radius: 5px;
   border: 2px solid black;
-
   font-size: 20px;
-
-
   color:rgba(242, 238, 238, 0.948);
   background-color:rgba(0, 0, 0, 0.826);
-  
   width: 150px;
   height: 35px;
   cursor: pointer;
@@ -255,18 +252,11 @@ body {
 
 }
 
-.collapsible {
-  width: 302px;
-  height: 50px;
-  padding: 10px;
-  cursor: pointer;
-}
 
 .content {
   background-color: white;
   width: 300px;
   height: 600px;
-  border: 1px solid black;
   text-align: left;
 
 
