@@ -49,6 +49,13 @@ body {
     margin:0px 5%;
   }
 
+  .search-form{
+
+    flex-grow: 1;
+    min-width: 18rem;
+    
+  }
+
 
 
   .search-form input{
@@ -58,6 +65,7 @@ body {
     background-color: rgba(255, 255, 255, 0.747);
     border-radius: 5px;
     border: 1px solid lightgray;
+    min-width: 50px;
   }
 
   .search-container button {
@@ -251,17 +259,21 @@ body {
   background-color: white;
   width: 300px;
   height: 600px;
-  text-align: center;
   border-right: 3px solid #ffbb00;
-
+  text-align: center;
 
 }
 
 
 
+.contentOf {
+  display: inline-block; 
+  text-align: left;
+}
 
 .indenter {
   padding: 10px;
+
 }
 
 
