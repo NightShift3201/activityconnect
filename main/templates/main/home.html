@@ -24,7 +24,7 @@
     <div class="search-container">
       <form class = "search-form" action="{% url 'search' %}" method="POST">
         {% csrf_token %}
-        <input type="text" placeholder="   " name="query" value="{{ request.POST.query }}"autocomplete="off">
+        <input type="text" placeholder="Search" name="query" value="{{ request.POST.query }}"autocomplete="off">
         <button type="submit"><i class="fa fa-search"></i></button>
       </form>
     </div>
