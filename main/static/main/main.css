@@ -186,7 +186,6 @@ body {
     column-gap: 25px;
     row-gap: 10px;
     padding: 25px 5%;
-    align-items: center;
     justify-content: center;
   }
   
@@ -200,9 +199,7 @@ body {
     width: 100%;
     height: 0;
     padding-bottom: 100%;
-    text-align: center;
     background-color: rgb(255, 255, 255);
-
     padding-top: 5px;
   }
 
@@ -234,25 +231,15 @@ body {
   }
 
   #storefront .activity .text{
-    margin: 10px;
+    margin-left: 10px;
   }
   #storefront .activity .title {
-    font-size: 1.5em;
-    margin: 10px 0;
+    margin:0;
   }
 
-  .cost {
-    color: green;
-    font-size: 1.2em;
-    margin: 10px 0;
-  }
-
-  
-
-  
-  .activity h2 {
+  #storefront .activity .time, #storefront .activity p {
     margin: 0;
-  }
+}
   
 
 

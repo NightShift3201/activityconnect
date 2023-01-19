@@ -166,7 +166,7 @@
                       </div>
                       <div class="text">
                         <h2 align = "left" class = "title">{{ activity.title }}</h2>
-                        <h3 align = "left" class = "cost">${{activity.price}}</h3>
+                        <h3 align = "left" class = "time">{{activity.startTime|time:"g:i" }}-{{activity.endTime|time:"g:i" }}</h3>
                         <p align = "left">{{activity.description}}</p>
                       </div>
                   </article>
