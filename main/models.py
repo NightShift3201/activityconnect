@@ -9,10 +9,7 @@ class Day(models.Model):
         return self.name
     name = models.CharField(max_length=10)
 
-class Difficulty(models.Model):
-    def __str__(self):
-        return self.name
-    difficulty = models.CharField(max_length=10)
+
 
 
 class Activity(models.Model):
@@ -53,5 +50,5 @@ class Activity(models.Model):
     difficulty = models.CharField(max_length=25,choices=DIFFICULTY_LEVEL, blank=True)
 
     tags = TaggableManager()
-    days_of_week = models.ManyToManyField(Day)
+    days_of_week = models.ManyToManyField(Day, related_name='activty_list')
 

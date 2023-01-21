@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Activity Connect</title>
+  <title>ActiVenture</title>
   {% load static %}
   <link rel="stylesheet" href="{% static 'main/main.css' %}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -165,9 +165,17 @@
                         <img src="{{activity.thumbnail.url}}" alt="{{ activity.title }}">
                       </div>
                       <div class="text">
-                        <h2 align = "left" class = "title">{{ activity.title }}</h2>
+                        <div class="inline">
+                          <h2 align = "left" class = "title">{{ activity.title }}</h2>
+                          <p align = "left" class = "host">Hosted by {{activity.hostName}}</p>
+                        </div>
+                        <p align = "left" class = "location">{{activity.streetAddress}}, {{activity.city}}</p>
                         <h3 align = "left" class = "time">{{activity.startTime|time:"g:i" }}-{{activity.endTime|time:"g:i" }}</h3>
-                        <p align = "left">{{activity.description}}</p>
+                        <p align = "left" class = "days">
+                          {% for day in activity.days_of_week.all %}
+                            {{ day.name|capfirst }}{% if not forloop.last %},{% endif %}
+                          {% endfor %}
+                        </p>
                       </div>
                   </article>
               </a>

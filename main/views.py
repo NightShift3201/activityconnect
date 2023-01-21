@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Activity
+from .models import Activity, Day
 from django.db.models import Q
 from django.shortcuts import redirect
 
