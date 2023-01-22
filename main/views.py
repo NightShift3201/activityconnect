@@ -4,6 +4,7 @@ from .models import Activity, Day
 from django.db.models import Q
 from django.shortcuts import redirect
 
+
 def index(request):
     return redirect('/home')
 
@@ -17,10 +18,15 @@ def home(request):
 def view_activity(request, activity_name):
     activity_name = activity_name.replace('_', ' ')
     activity = Activity.objects.get(title=activity_name)
-    context = {'activity': activity}
+    category = request.GET.get('category')
+    context = {
+        'activity': activity,
+        'category': category
+    }
     return render(request, 'main/activity.html', context)
 
 def view_category(request, category_name):
+
     if category_name=="all":
         activty_list = Activity.objects.all()
     else:
@@ -34,19 +40,24 @@ def view_category(request, category_name):
 
 
 def search(request):
-  if request.method == 'POST':
-    query = request.POST.get('query')
+    if request.method == 'GET':
+        query = request.GET.get('query')
 
-    activty_list = Activity.objects.filter(Q(title__icontains=query) | Q(description__icontains=query))
-    context = {
-        'activty_list' : activty_list
-    }
-
-    return render(request, 'main/home.html', {'activty_list': activty_list})
-  else:
-    activty_list = Activity.objects.all()
-    context = {
-        'activty_list' : activty_list
-    }
-    return render(request, 'main/home.html',context)
+        if query:
+            activty_list = Activity.objects.filter(Q(title__icontains=query) | Q(description__icontains=query))
+            context = {
+                'activty_list': activty_list
+            }
+        else:
+            activty_list = Activity.objects.all()
+            context = {
+                'activty_list': activty_list
+            }
+        return render(request, 'main/home.html', context)
+    else:
+        activty_list = Activity.objects.all()
+        context = {
+            'activty_list': activty_list
+        }
+        return render(request, 'main/home.html', context)
 

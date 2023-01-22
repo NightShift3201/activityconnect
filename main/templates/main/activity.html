@@ -94,15 +94,26 @@
     </nav>
   </header>
   <main>
-    <h1>{{ activity.title }}</h1>
-    <img src="{{activity.thumbnail.url}}" alt="{{ activity.title }}">
-    <p>{{ activity.description }}</p>
-    <p>Area code: {{ activity.area_code }}</p>
-    <p>Start time: {{ activity.startTime }}</p>
-    <p>End time: {{ activity.endTime }}</p>
-    <p>Start date: {{ activity.startDate }}</p>
-    <p>End date: {{ activity.endDate }}</p>
-    <p>Frequency: {{ activity.frequency }}</p>
+    <div class="activity-page">
+      <div class="activity-header">
+        <h1>{{ activity.title }}</h1>
+        <img src="{{ activity.thumbnail.url }}" alt="{{ activity.title }}">
+        <h2> Category: {% if category %}{{ category }}{% else %}Home{% endif %}</h2></h2>
+      </div>
+      <div class="activity-details">
+        <p><strong>Description:</strong> {{ activity.description }}</p>
+        <p><strong>Location:</strong> {{ activity.streetAddress }}, {{ activity.city }}, {{ activity.state }}, {{ activity.areaCode }}, {{ activity.country }}</p>
+        <p><strong>Date & Time:</strong> {{ activity.startDate }} - {{ activity.endDate }} at {{ activity.startTime }} - {{ activity.endTime }}</p>
+        <p><strong>Frequency:</strong> {{ activity.frequency }}</p>
+        <p><strong>Price:</strong> {{ activity.price }}</p>
+        <p><strong>Host:</strong> {{ activity.hostName }}</p>
+        <p><strong>Participants:</strong> {{ activity.participants }}</p>
+        <p><strong>Age Range:</strong> {{ activity.minAge }} - {{ activity.maxAge }}</p>
+        <p><strong>Difficulty:</strong> {{ activity.difficulty }}</p>
+        <p><strong>Tags:</strong> {% for tag in activity.tags.all %}{{ tag }}{% endfor %}</p>
+        <p><strong>Days of the Week:</strong> {% for day in activity.days_of_week.all %}{{ day.name }}{% endfor %}</p>
+      </div>
+    </div>
     </main>
     <footer>
       <div class="container">

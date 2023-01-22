@@ -22,8 +22,7 @@
       </ul>
     </nav>
     <div class="search-container">
-      <form class = "search-form" action="{% url 'search' %}" method="POST">
-        {% csrf_token %}
+      <form class = "search-form" action="{% url 'search' %}" method="get">
         <input type="text" placeholder="Search" name="query" value="{{ request.POST.query }}"autocomplete="off">
         <button type="submit"><i class="fa fa-search"></i></button>
       </form>
@@ -159,7 +158,7 @@
       
       {% if activty_list %}
           {% for activity in activty_list %}
-              <a href="/activity/{{ activity.title }}/">
+              <a href="/activity/{{ activity.title }}/?category={{ category }}">
                   <article class="activity">
                       <div class="image_container"> 
                         <img src="{{activity.thumbnail.url}}" alt="{{ activity.title }}">

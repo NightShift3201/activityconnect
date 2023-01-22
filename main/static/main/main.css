@@ -310,6 +310,43 @@ footer {
   align-items: center;
 }
 
+
+
+
+.activity-page {
+  width: 80%;
+  margin: 50px auto;
+}
+
+.activity-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.activity-header img {
+  width: 50%;
+  height: auto;
+  margin-right: 20px;
+}
+
+.activity-header h1 {
+  font-size: 3em;
+  margin: 0;
+}
+
+.activity-details p {
+  margin: 10px 0;
+  font-size: 1.2em;
+}
+
+.activity-details strong {
+  font-weight: bold;
+}
+
+
+
+
 footer p {
   margin: 0;
 }
