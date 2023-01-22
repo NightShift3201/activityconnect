@@ -317,11 +317,8 @@ footer {
   width: 80%;
   margin: 50px auto;
 }
-
-.activity-header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
+.activity-page .title{
+  margin: 20px;
 }
 
 .activity-header img {

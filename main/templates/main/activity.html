@@ -21,8 +21,7 @@
       </ul>
     </nav>
     <div class="search-container">
-      <form class = "search-form" action="{% url 'search' %}" method="POST">
-        {% csrf_token %}
+      <form class = "search-form" action="{% url 'search' %}" method="get">
         <input type="text" placeholder="Search" name="query" value="{{ request.POST.query }}"autocomplete="off">
         <button type="submit"><i class="fa fa-search"></i></button>
       </form>
@@ -96,8 +95,8 @@
   <main>
     <div class="activity-page">
       <div class="activity-header">
-        <h1>{{ activity.title }}</h1>
-        <img src="{{ activity.thumbnail.url }}" alt="{{ activity.title }}">
+        <h1 align = "left" class="title"> {{ activity.title }}</h1>
+        <img align = "left" src="{{ activity.thumbnail.url }}" alt="{{ activity.title }}">
         <h2> Category: {% if category %}{{ category }}{% else %}Home{% endif %}</h2></h2>
       </div>
       <div class="activity-details">
