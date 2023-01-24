@@ -314,31 +314,36 @@ footer {
 
 
 .activity-page {
-  width: 80%;
+  width: 70%;
   margin: 50px auto;
+  display: flex;
+  flex-wrap: wrap;
 }
+
 .activity-page .title{
-  margin: 20px;
+  font-size: 3em;
+  margin:10px 0;
+}
+
+.activity-header {
+  width: 100%;
+  display: flex;
 }
 
 .activity-header img {
-  width: 50%;
-  height: auto;
+  width: 55%;
+  max-height: 50vh;
+  object-fit: contain;
   margin-right: 20px;
+  border-radius: 10px;
+}
+.activity-header p{
+  font-size: 1.4em;
 }
 
-.activity-header h1 {
-  font-size: 3em;
-  margin: 0;
-}
-
-.activity-details p {
-  margin: 10px 0;
-  font-size: 1.2em;
-}
-
-.activity-details strong {
-  font-weight: bold;
+.activity-details {
+  margin-top: 20px;
+  font-size: 1.5em;
 }
 
 

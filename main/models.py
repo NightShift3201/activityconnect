@@ -17,7 +17,7 @@ class Activity(models.Model):
         return self.title
 
     title = models.CharField(max_length=50)
-    description = models.CharField(max_length=250)
+    description = models.TextField()
 
     streetAddress = models.CharField(max_length=50, blank=True)
     city = models.CharField(max_length=25,blank=True)

@@ -94,13 +94,15 @@
   </header>
   <main>
     <div class="activity-page">
+      <h1 class="title">{{ activity.title }}</h1>
       <div class="activity-header">
-        <h1 align = "left" class="title"> {{ activity.title }}</h1>
-        <img align = "left" src="{{ activity.thumbnail.url }}" alt="{{ activity.title }}">
-        <h2> Category: {% if category %}{{ category }}{% else %}Home{% endif %}</h2></h2>
+        <img src="{{ activity.thumbnail.url }}" alt="{{ activity.title }}">
+        <div style="display:block">
+          <h2>About:</h2>
+          <p>{{ activity.description }}</p>
+        </div>
       </div>
       <div class="activity-details">
-        <p><strong>Description:</strong> {{ activity.description }}</p>
         <p><strong>Location:</strong> {{ activity.streetAddress }}, {{ activity.city }}, {{ activity.state }}, {{ activity.areaCode }}, {{ activity.country }}</p>
         <p><strong>Date & Time:</strong> {{ activity.startDate }} - {{ activity.endDate }} at {{ activity.startTime }} - {{ activity.endTime }}</p>
         <p><strong>Frequency:</strong> {{ activity.frequency }}</p>
@@ -113,7 +115,7 @@
         <p><strong>Days of the Week:</strong> {% for day in activity.days_of_week.all %}{{ day.name }}{% endfor %}</p>
       </div>
     </div>
-    </main>
+  </main>
     <footer>
       <div class="container">
         <p>Copyright ©2022 ActiVenture</p>
