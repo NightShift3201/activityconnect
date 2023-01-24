@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Activity Connect</title>
+  <title>{{activity.title}} | ActiVenture</title>
   {% load static %}
   <link rel="stylesheet" href="{% static 'main/main.css' %}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -103,6 +103,9 @@
         </div>
       </div>
       <div class="activity-details">
+        <button type = "submit" onclick="location.href='{{activity.activityPage}}'">
+          Sign Up!
+        </button>
         <p><strong>Location:</strong> {{ activity.streetAddress }}, {{ activity.city }}, {{ activity.state }}, {{ activity.areaCode }}, {{ activity.country }}</p>
         <p><strong>Date & Time:</strong> {{ activity.startDate }} - {{ activity.endDate }} at {{ activity.startTime }} - {{ activity.endTime }}</p>
         <p><strong>Frequency:</strong> {{ activity.frequency }}</p>

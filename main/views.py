@@ -8,6 +8,9 @@ from django.shortcuts import redirect
 def index(request):
     return redirect('/home')
 
+def aboutUs(request):
+    return HttpResponse(request, 'main/about_us.html')
+
 def home(request):
     activty_list = Activity.objects.all()
     context = {
