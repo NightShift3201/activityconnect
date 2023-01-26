@@ -29,11 +29,15 @@ def view_activity(request, activity_name):
     return render(request, 'main/activity.html', context)
 
 def view_category(request, category_name):
-
+    
     if category_name=="all":
         activty_list = Activity.objects.all()
     else:
         activty_list = Activity.objects.filter(tags__name__in=[category_name])
+
+    difficulty = request.GET.getlist('difficulty')
+    if difficulty:
+        activty_list = activty_list.filter(difficulty__in=difficulty)
     context = {
         'activty_list' : activty_list,
         'category' : category_name.capitalize()

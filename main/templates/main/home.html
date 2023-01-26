@@ -92,9 +92,21 @@
   <main>
     <h1>{{ category }}</h1>
 
-    <form class = "sidebar">
+    <div class = "sidebar">
         <div class="content">
-          <form action="/action_page.php">
+            <div class = "indenter"> 
+              <h2 class = "topic">Age</h2>
+              <form class = "contentOf" method="get">
+                <input type="checkbox" name="difficulty" class = "checkbox" id="beginner" value="beginner" {% if request.GET.difficulty and "beginner" in request.GET.difficulty %}checked{% endif %}>
+                <label for="beginner"> Beginner</label><br>
+                <input type="checkbox" name="difficulty" class = "checkbox" id="intermediate" value="intermediate"{% if request.GET.difficulty and "intermediate" in request.GET.difficulty %}checked{% endif %}>
+                <label for="intermediate"> Intermediate</label><br>
+                <input type="checkbox" name="difficulty" class = "checkbox" id="advanced"value="advanced"{% if request.GET.difficulty and "advanced" in request.GET.difficulty %}checked{% endif %}> 
+                <label for="advanced"> Advanced</label><br>
+                <button type="submit"></button>
+              </form>
+            </div> 
+
             <div class = "indenter"> 
               <h2 class = "topic">Price</h2>
               <div class = "contentOf">
@@ -107,7 +119,6 @@
                 <input type="checkbox" class = "checkbox">
                 <label for="v4"> $200 more</label><br>
               </div>
-              
             </div>  
             <div class = "indenter"> 
               <h2 class = "topic">Day of the Week</h2>
@@ -143,9 +154,8 @@
               
             </div> 
 
-          </form>
+          </div>
         </div>
-    </form>
 
 
     <section id="storefront">
