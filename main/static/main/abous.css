@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300&display=swap');
+* {
+  /*outline: 2px solid limegreen !important;*/
+  box-sizing: border-box;
+}
+.about-us {
+    padding-top: 5px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .about-us h1 {
+    color: blue;
+  }
+  
+  .about-us h2 {
+    color: green;
+  }
+
+  .row {
+    display: flex;
+    
+    
+  }
+  .column {
+    width: 33.33%;
+    
+  }
+
+  .column img {
+    height: 400px;
+    width: 100%;
+  }
+
+  .content2 {
+    width: 60%;
+    margin: auto;
+  }
+
+
+
+
+
+  
+

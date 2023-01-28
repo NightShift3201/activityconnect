@@ -259,9 +259,6 @@ body {
 
 
 
-
-
-
 .sidebar {
   width: 12%;
   height: 500px;
@@ -366,6 +363,12 @@ footer nav a {
 footer nav a:hover {
   text-decoration: underline;
 }
+
+.site-nav img {
+  height: 75px;
+}
+
+
 
 
 
