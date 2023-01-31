@@ -8,5 +8,6 @@ urlpatterns = [
     path('activity/<str:activity_name>/', views.view_activity),
     path('category/<str:category_name>/', views.view_category),
     path('search/', views.search, name="search"),
-    path('aboutus/', views.aboutUs)
+    path('aboutus/', views.aboutUs),
+    path('hostEvent/', views.hostEvent)
 ]

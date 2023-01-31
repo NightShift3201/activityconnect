@@ -31,12 +31,16 @@
   .column img {
     height: 400px;
     width: 100%;
+    background-color: blue;
   }
 
   .content2 {
     width: 60%;
     margin: auto;
   }
+
+
+  
 
 
 

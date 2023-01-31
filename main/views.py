@@ -11,6 +11,9 @@ def index(request):
 def aboutUs(request):
     return render(request, 'main/about_us.html')
 
+def hostEvent(request):
+    return render(request, 'main/hostEvent.html')
+
 def home(request):
     activty_list = Activity.objects.all()
     context = {
