@@ -9,9 +9,16 @@
     margin: 0 auto;
     text-align: center;
   }
+
+  img {
+    height: 40px;
+  }
+
+
+
   
   .about-us h1 {
-    color: blue;
+    font-weight: bold;
   }
   
   .about-us h2 {

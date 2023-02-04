@@ -15,23 +15,14 @@
 </head>
 <body>
   <!-- Header -->
-  <header class="page-head">
-    <nav class="site-nav">
-      <ul>
-        <a href="/home"><img src="{% static 'main/images/ActiVenture.png' %}" alt="Mimage"></a>
-      </ul>
-    </nav>
-    <div class="search-container">
-      <form class = "search-form" action="{% url 'search' %}" method="get">
-        <input type="text" placeholder="Search" name="query" value="{{ request.POST.query }}"autocomplete="off">
-        <button type="submit"><i class="fa fa-search"></i></button>
-      </form>
-    </div>
-  </header>
+
 
   <header type = "submit" class = "recommend_Bar">
     <nav>
       <ul>
+        <li>
+          <a href="/home"><img src="{% static 'main/images/ActiVenture.png' %}" alt="Mimage"></a>
+        </li>
         <li>
           <button type = "submit" class = "Jack" onclick="location.href='/category/all'">
             All
@@ -93,19 +84,20 @@
 
       <div class = "row">
         <div class="column">
-          <img src="{% static 'main/images/kidsawards.jpg' %}" alt="My image">
+          <img src="{% static 'main/images/booksTINTT.PNG' %}" alt="My image">
         </div>
         <div class="column">
-          <img src="{% static 'main/images/teach.jpg' %}" alt="Mimage">
+          <img src="{% static 'main/images/tint2.PNG' %}" alt="Mimage">
         </div>
         <div class="column">
-          <img src="{% static 'main/images/pencil.jpg' %}" alt="Mimage">
+          <img src="{% static 'main/images/pencilGreen.PNG' %}" alt="Mimage">
         </div>
       </div>
 
       <div class = "content2">
         <h1>About Us</h1>
-        <p>Providing influential opportunities for the youth is at the center of ActiVenture. In order to give younger generations a chance to explore their interests, our customers must be able to find activities that would complement their passions, as well as their busy schedule. Our mission is to inspire the next generation to pursue their dreams and reach their full potential. Whether it's through hands-on workshops, interactive events, or mentorship programs, we aim to provide a supportive and inclusive environment where youth can learn, grow and have fun. Join us as we empower the youth to discover their passions and shape their future. </p>
+        <p>Providing influential opportunities for the youth is at the center of active in order to give youn
+          Providing influential opportunities for the youth is at the center of ActiVenture. In order to give younger generations a chance to explore their interests, our customers must be able to find activities that would complement their passions, as well as their busy schedule. Our mission is to inspire the next generation to pursue their dreams and reach their full potential. Whether it's through hands-on workshops, interactive events, or mentorship programs, we aim to provide a supportive and inclusive environment where youth can learn, grow and have fun. Join us as we empower the youth to discover their passions and shape their future. </p>
         <h2>Our Team</h2>
         <ul>
           <li>John Smith - CEO</li>
@@ -131,7 +123,7 @@
           <a href="/home">Home</a>
           <a href="#">About</a>
           <a href="#">Contact</a>
-          <a href="#">Host Your Event</a>
+          <a href="/hostEvent">Host Your Event</a>
           <a href="#">Our Team</a>
         </nav>
       </div>

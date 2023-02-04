@@ -1,11 +1,96 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <title>Event Registration Form</title>
-  <link rel="stylesheet" type="text/css" href="host.css">
-</head>
-<body>
+  <!doctype html>
+
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ActiVenture</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'main/main.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="page-head">
+      <nav class="site-nav">
+        <ul>
+          <a href="/home"><img src="{% static 'main/images/ActiVenture.png' %}" alt="Mimage"></a>
+        </ul>
+      </nav>
+      <div class="search-container">
+        <form class = "search-form" action="{% url 'search' %}" method="get">
+          <input type="text" placeholder="Search" name="query" value="{{ request.POST.query }}"autocomplete="off">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+  
+    </header>
+  
+    <header type = "submit" class = "recommend_Bar">
+      <nav>
+        <ul>
+          <li>
+            <button type = "submit" class = "Jack" onclick="location.href='/category/all'">
+              All
+            </button>
+          </li>
+  
+          <li>
+            <button  type = "submit" class = "Jack" onclick="location.href='/category/sports'">
+              Sports
+            </button>
+          </li>
+  
+          <li>
+            <button type = "submit" class = "Jack" onclick="location.href='/category/camps'">
+              Camps
+            </button>
+          </li>
+  
+  
+          <li>
+            <button type = "submit" class = "Jack" onclick="location.href='/category/academics'">
+              Academics
+            </button>
+          </li>
+  
+  
+          <li>
+            <button type = "submit" class = "Jack" onclick="location.href='/category/music'">
+              Music
+            </button>
+          </li>
+  
+          <li>
+            <button type = "submit" class = "Jack" onclick="location.href='/category/arts'">
+              Arts
+            </button>
+          </li>
+  
+          <li>
+            <button type = "submit" class = "Jack" onclick="location.href='/category/afterschool'">
+              After School
+            </button>
+          </li>
+  
+          <li>
+            <button type = "submit" class = "Jack" onclick="location.href='/category/coding'">
+              Coding
+            </button>
+          </li>
+  
+  
+        </ul>
+      </nav>
+    </header>
+
+
+  <main>
+    
   <h1>Event Registration Form</h1>
   <form action="submit.php" method="post">
     <label for="event_name">Event Name:</label>
@@ -28,5 +113,26 @@
 
     <input type="submit" value="Submit">
   </form>
+</html>
+
+</main>
+
+
+<footer>
+  <div class="container">
+    <p>Copyright ©2022 ActiVenture</p>
+    <nav>
+      <a href="/home">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <a href="#">Host Your Event</a>
+      <a href="#">Our Team</a>
+    </nav>
+  </div>
+</footer>
+
+
 </body>
+
+
 </html>
