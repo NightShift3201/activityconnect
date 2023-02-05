@@ -30,7 +30,7 @@ class Activity(models.Model):
     startTime = models.TimeField()
     endTime = models.TimeField()
     frequency = models.CharField(max_length=50)
-    price = models.CharField(max_length=10, blank=True)
+    price = models.DecimalField(max_digits=5, decimal_places=2, blank=True)
     thumbnail = models.ImageField(blank=True, upload_to='images/')
     activityPage= models.URLField(blank=True)
     hostName = models.CharField(max_length=25, blank=True)

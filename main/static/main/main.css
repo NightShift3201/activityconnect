@@ -20,11 +20,14 @@ body {
   .page-head{
     background-color: #ffffff;
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding: 25px 100px 15px;
-    min-height: 50px;
+    padding: 15px 75px 5px;
+    min-height: 40px;
     max-width: 100%;
+  }
+
+  .page-head nav{
+    float: left;
   }
   
   header ul {
@@ -39,10 +42,6 @@ body {
     margin: 0 5px;
   }
   
-  header a {
-    text-decoration: none;
-    color: black;
-  }
   .search-container{
     align-items: center;
     width: 55%;
@@ -177,8 +176,6 @@ body {
     flex: 1;
   }
 
-
-  
   
   #storefront {
     display: grid;
@@ -272,7 +269,7 @@ body {
 .content {
   background-color: white;
   width: 100%;
-  height: 600px;
+  height: auto;
   border-right: 2px solid #ffc428;
   text-align: center;
 
@@ -299,7 +296,7 @@ footer {
   
 }
 
-.container {
+footer .container {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;

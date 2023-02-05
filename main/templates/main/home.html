@@ -93,65 +93,51 @@
 
     <div class = "sidebar">
         <div class="content">
+          <button type="button" id="reset-filter-btn">Reset Filter</button>
             <div class = "indenter"> 
-              <h2 class = "topic">Age</h2>
-              <form class = "contentOf" method="get">
-                <input type="checkbox" name="difficulty" class = "checkbox" id="beginner" value="beginner" {% if request.GET.difficulty and "beginner" in request.GET.difficulty %}checked{% endif %}>
-                <label for="beginner"> Beginner</label><br>
-                <input type="checkbox" name="difficulty" class = "checkbox" id="intermediate" value="intermediate"{% if request.GET.difficulty and "intermediate" in request.GET.difficulty %}checked{% endif %}>
-                <label for="intermediate"> Intermediate</label><br>
-                <input type="checkbox" name="difficulty" class = "checkbox" id="advanced"value="advanced"{% if request.GET.difficulty and "advanced" in request.GET.difficulty %}checked{% endif %}> 
-                <label for="advanced"> Advanced</label><br>
-                <button type="submit"></button>
-              </form>
+              <h2 class = "topic">Difficulty</h2>
+              <div class="contentOf">
+                <a href="javascript:location.search+='&difficulty=beginner';">Beginner</a>
+                <a href="javascript:location.search+='&difficulty=intermediate';">Intermediate</a>
+                <a href="javascript:location.search+='&difficulty=advanced';">Advanced</a>
+              </div>
             </div> 
 
             <div class = "indenter"> 
               <h2 class = "topic">Price</h2>
-              <div class = "contentOf">
-                <input type="checkbox" class = "checkbox">
-                <label for="v1"> $0 to $50</label><br>
-                <input type="checkbox" class = "checkbox">
-                <label for="v2"> $50 to $100</label><br>
-                <input type="checkbox" class = "checkbox">
-                <label for="v3"> $100 to $200</label><br>
-                <input type="checkbox" class = "checkbox">
-                <label for="v4"> $200 more</label><br>
-              </div>
+              <form id="price-form" class="contentOf">
+                <label for="min-price">Min Price:</label>
+                <input type="number" id="min-price" name="min_price">
+                <label for="max-price">Max Price:</label>
+                <input type="number" id="max-price" name="max_price">
+                <button type="submit">Filter</button>
+              </form>
             </div>  
+
             <div class = "indenter"> 
               <h2 class = "topic">Day of the Week</h2>
-                <div class = "contentOf">
-                  <input type="checkbox" class = "checkbox">
-                  <label for="v1"> Monday</label><br>
-                  <input type="checkbox" class = "checkbox">
-                  <label for="v2"> Tuesday</label><br>
-                  <input type="checkbox" class = "checkbox">
-                  <label for="v3"> Wednesday</label><br>
-                  <input type="checkbox" class = "checkbox">
-                  <label for="v4"> Thursday</label><br>
-                  <input type="checkbox" class = "checkbox">
-                  <label for="v4"> Friday</label><br>
-                  <input type="checkbox" class = "checkbox">
-                  <label for="v4"> Saturday</label><br>
-                  <input type="checkbox" class = "checkbox">  
-                  <label for="v4"> Sunday</label><br>
-                </div>
+              <div class="contentOf">
+                <a href="javascript:location.search+='&day=monday';">Monday</a>
+                <a href="javascript:location.search+='&day=tuesday';">Tuesday</a>
+                <a href="javascript:location.search+='&day=wednesday';">Wednesday</a>
+                <a href="javascript:location.search+='&day=thursday';">Thursday</a>
+                <a href="javascript:location.search+='&day=friday';">Friday</a>
+                <a href="javascript:location.search+='&day=saturday';">Saturday</a>
+                <a href="javascript:location.search+='&day=sunday';">Sunday</a>
+              </div>
             </div> 
             <div class = "indenter"> 
               <h2 class = "topic">Age</h2>
-              <div class = "contentOf">
-                <input type="checkbox" class = "checkbox">
-                <label for="v1"> 5 and under</label><br>
-                <input type="checkbox" class = "checkbox">
-                <label for="v1"> 6 to 10</label><br>
-                <input type="checkbox" class = "checkbox">
-                <label for="v1"> 11 to 15</label><br>
-                <input type="checkbox" class = "checkbox">
-                <label for="v1"> 16 older</label><br>
-              </div>
-              
+              <form id="age-form" class="contentOf">
+                <label for="min-age">Min Age:</label>
+                <input type="number" id="min-age" name="min_age">
+                <label for="max-age">Max Age:</label>
+                <input type="number" id="max-age" name="max_age">
+                <button type="submit">Filter</button>
+              </form>
             </div> 
+
+            
 
           </div>
         </div>
@@ -217,5 +203,7 @@
 
 </body>
 
+
+<script src="{% static 'main/main.js' %}"></script>
 
 </html>
