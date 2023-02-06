@@ -257,14 +257,27 @@ body {
 
 
 .sidebar {
+  padding-left: 1%;
   width: 12%;
   height: 800px;
   float: left;
 }
 .sidebar h2{
   font-weight: 500;
+  margin: 0;
+  font-size: 1.8em;
 }
 
+.sidebar a{
+  display: block;
+  text-decoration: none;
+  color: black;
+}
+.sidebar a:hover{
+  display: block;
+  text-decoration: underline;
+  color: black;
+}
 
 .content {
   background-color: white;
@@ -272,20 +285,16 @@ body {
   height: auto;
   border-right: 2px solid #ffc428;
   text-align: center;
+  padding-right: 2%;
 
 }
-
-
 
 .contentOf {
   display: inline-block; 
   text-align: left;
 }
 
-.indenter {
-  padding: 10px;
 
-}
 
 
   

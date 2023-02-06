@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from .models import Activity, Day
 from django.db.models import Q
 from django.shortcuts import redirect
-from decimal import Decimal
+from decimal import Decimal, InvalidOperation
 
 
 def index(request):
@@ -49,15 +49,38 @@ def view_category(request, category_name):
         activty_list = activty_list.filter(Q(days_of_week__in=day_instances) | Q(days_of_week__name__icontains="everyday")).distinct()
 
     if 'min_price' in request.GET and 'max_price' in request.GET:
-        min_price = Decimal(request.GET['min_price'])
-        max_price = Decimal(request.GET['max_price'])
-        activty_list = activty_list.filter(price__gte=min_price, price__lte=max_price)
+        try:
+            min_price = request.GET.get('min_price', '')
+            max_price = request.GET.get('max_price', '')
+
+            if min_price.isdigit():
+                min_price = Decimal(min_price)
+                activty_list = activty_list.filter(price__gte=min_price)
+    
+            if max_price.isdigit():
+                max_price = Decimal(max_price)
+                activty_list = activty_list.filter(price__lte=max_price)
+            
+        except InvalidOperation:
+            min_price = None
+            max_price = None
     
     if 'min_age' in request.GET and 'max_age' in request.GET:
-        min_age = Decimal(request.GET['min_age'])
-        max_age = Decimal(request.GET['max_age'])
-        activty_list = activty_list.filter(minAge__gte=min_age, minAge__lte=max_age)
-        activty_list = activty_list.filter(minAge__gte=min_age, minAge__lte=max_age).distinct()
+        try:
+            min_age = request.GET.get('min_age', '')
+            max_age = request.GET.get('max_age', '')
+
+            if min_age.isdigit():
+                min_age = Decimal(min_age)
+                activty_list = activty_list.filter(maxAge__gte=min_age)
+    
+            if max_age.isdigit():
+                max_age = Decimal(max_age)
+                activty_list = activty_list.filter(minAge__lte=max_age).distinct()
+
+        except InvalidOperation:
+            min_age = None
+            max_age = None
 
     context = {
         'activty_list' : activty_list,
