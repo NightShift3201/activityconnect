@@ -105,7 +105,7 @@ body {
     border:none;
     font-size: 0.8em;
     background-color:rgba(255, 255, 255, 0.826);
-    width: 6vw;
+    width: 8vw;
     height: 50px;
     cursor: pointer;
     font-weight: 600;
@@ -116,52 +116,6 @@ body {
   .Jack:hover{
     background-color: rgba(231, 231, 231, 0.5);
   }
-
-
-  .dropbtn {
-  background-color: #000000;
-  color: white;
-  padding: 13px;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-}
-
- .dropdown {
-  margin-left: auto; 
-  margin-right: 0%;
-  float: right;
-  position: relative;
-  cursor: pointer;
-  flex-shrink: 0;
-  
-}
-
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {background-color: #ddd;}
-
-.dropdown:hover .dropdown-content {display: block;}
-
-.dropdown:hover .dropbtn {background-color: #040504;}
-
-
-
 
 
 
@@ -257,23 +211,25 @@ body {
 
 
 .sidebar {
-  padding-left: 1%;
-  width: 12%;
-  height: 800px;
+  width: 14%;
+  height: auto;
   float: left;
-  display: flex;
-  justify-content: center;
+  padding-top: 20px;
 }
 .sidebar h2{
   font-weight: 500;
   margin: 0;
   font-size: 1.8em;
+  padding-top: 40px;
+  padding-bottom: 10px;
 }
 
 .sidebar a{
   display: block;
   text-decoration: none;
   color: black;
+  font-size: 1.2em;
+  padding: 5x 0px;
 }
 .sidebar a:hover{
   display: block;
@@ -281,24 +237,47 @@ body {
   color: black;
 }
 
-.sidebar .button-wrapper {
-  margin: auto;
-  width: 80%;
-  height: 30px;
-  background-color: #ffc428;
-  display: flex;
-  align-items: center;
-  border-radius: 5px;
-  justify-content: space-between;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  
-}
+
 
 .button-wrapper p {
   margin-left: 10%;
 }
 
+.sidebar input{
+  height: 40px;
+  width:25%;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+}
+
+
+.sidebar button[type="submit"] {
+  background-color: #ffc428;
+  border: none;
+  border-radius: 4px;
+  width: 30px;
+  height: 40px;
+  color:white;
+  cursor: pointer;
+  padding: 0;
+}
+
+.sidebar .input_form{
+  text-align: center;
+  transform: translate(15px,0px);
+}
+
+.sidebar .button-wrapper {
+  margin: auto;
+  width: 80%;
+  height: 40px;
+  background-color: #ffc428;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  justify-content: space-between;
+  
+}
 
 
 #reset-filter-btn {
