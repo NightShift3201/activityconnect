@@ -38,10 +38,17 @@ document.getElementById("age-form").onsubmit = function() {
     if (existingQuery.length === 0) {
       window.location.search = "?" + newQuery;
     } else {
-      window.location.search = existingQuery + newQuery;
+      window.location.search = newQuery;
     }
     return false;
   };
+
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+
+  if (!urlParams.toString()) {
+    document.getElementById("reset-filter-div").style.display = "none";
+  }
 
 
 
