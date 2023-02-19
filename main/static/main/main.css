@@ -334,7 +334,7 @@ footer .container {
 
 
 .activity-page {
-  width: 70%;
+  width: 80%;
   margin: 50px auto;
   display: flex;
   flex-wrap: wrap;
@@ -342,7 +342,7 @@ footer .container {
 
 .activity-page .title{
   font-size: 3em;
-  margin:10px 0;
+  margin:20px 0;
 }
 
 .activity-header {
@@ -350,20 +350,51 @@ footer .container {
   display: flex;
 }
 
+.activity-image{
+  width: 50%;
+  height: auto;
+  margin-right: 5%;
+  
+}
+
 .activity-header img {
-  width: 55%;
+  width: 100%;
+  height:auto;
   max-height: 50vh;
-  object-fit: contain;
-  margin-right: 20px;
-  border-radius: 10px;
+  border-radius: 25px;
 }
 .activity-header p{
-  font-size: 1.4em;
+  font-size: 1.3vw;
+  text-align: left;
+  margin: 10px;
+}
+
+.activity-header strong{
+  font-size:1.5vw;
 }
 
 .activity-details {
   margin-top: 20px;
   font-size: 1.5em;
+  text-align: left;
+
+}
+
+.activity-page button{
+  height: 50px;
+  width: 200px;
+  background-color: #ffc428;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Assistant', sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  color: rgb(70, 70, 70);
+}
+
+.activity-page button:hover{
+  cursor: pointer;
+  background-color: #ffbb00;
 }
 
 
