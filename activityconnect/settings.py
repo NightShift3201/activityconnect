@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +26,7 @@ SECRET_KEY = 'django-insecure-0beu=ibqc8aoulam$y!(%h&*5onsfrws3ez#co5a3!#hk+43vd
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["164.92.68.123"]
 
 
 # Application definition
@@ -77,11 +78,11 @@ WSGI_APPLICATION = 'activityconnect.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': '',
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'activenture',
+        'USER': 'main',
+        'PASSWORD': 'B7#Ne4K2AR9Y',
+        'HOST': 'localhost',
         'PORT': '',
     }
 }
@@ -121,7 +122,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media/'
 
